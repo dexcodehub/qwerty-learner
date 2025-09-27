@@ -20,6 +20,7 @@ security find-identity -v -p codesigning
 ```
 
 输出示例：
+
 ```
 1) 1234567890ABCDEF1234567890ABCDEF12345678 "Apple Development: Your Name (XXXXXXXXXX)"
 2) ABCDEF1234567890ABCDEF1234567890ABCDEF12 "Apple Development: Another Name (YYYYYYYYYY)"
@@ -30,12 +31,14 @@ security find-identity -v -p codesigning
 ### 方式一：使用构建脚本（推荐）
 
 #### 签名构建
+
 ```bash
 # 使用完整的签名身份名称
 ./scripts/build-signed.sh "Apple Development: Your Name (XXXXXXXXXX)"
 ```
 
 #### 无签名构建（开发环境）
+
 ```bash
 ./scripts/build-unsigned.sh
 ```
@@ -85,12 +88,14 @@ codesign -dv "path/to/your.dmg"
 ### 常见问题
 
 1. **"Resource busy" 错误**
+
    ```bash
    # 强制卸载挂载的磁盘映像
    hdiutil detach -force "/Volumes/Qwerty Learner"
    ```
 
 2. **找不到签名身份**
+
    - 确保证书已正确安装在 Keychain Access 中
    - 检查证书是否过期
    - 使用 `security find-identity -v -p codesigning` 确认可用身份
