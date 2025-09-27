@@ -1,0 +1,70 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle with Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="keyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#f8fafc;stop-opacity:0.8" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Main Background -->
+  <circle cx="100" cy="100" r="90" fill="url(#bgGradient)" filter="url(#shadow)"/>
+  
+  <!-- Keyboard Base -->
+  <rect x="40" y="120" width="120" height="50" rx="8" fill="#2d3748" opacity="0.8"/>
+  
+  <!-- Keyboard Keys Row 1 -->
+  <rect x="50" y="130" width="12" height="12" rx="2" fill="url(#keyGradient)"/>
+  <rect x="66" y="130" width="12" height="12" rx="2" fill="url(#keyGradient)"/>
+  <rect x="82" y="130" width="12" height="12" rx="2" fill="url(#keyGradient)"/>
+  <rect x="98" y="130" width="12" height="12" rx="2" fill="url(#keyGradient)"/>
+  <rect x="114" y="130" width="12" height="12" rx="2" fill="url(#keyGradient)"/>
+  <rect x="130" y="130" width="12" height="12" rx="2" fill="url(#keyGradient)"/>
+  
+  <!-- Keyboard Keys Row 2 -->
+  <rect x="54" y="146" width="12" height="12" rx="2" fill="url(#keyGradient)"/>
+  <rect x="70" y="146" width="12" height="12" rx="2" fill="url(#keyGradient)"/>
+  <rect x="86" y="146" width="12" height="12" rx="2" fill="url(#keyGradient)"/>
+  <rect x="102" y="146" width="12" height="12" rx="2" fill="url(#keyGradient)"/>
+  <rect x="118" y="146" width="12" height="12" rx="2" fill="url(#keyGradient)"/>
+  
+  <!-- Large Q Letter -->
+  <g transform="translate(100, 70)">
+    <!-- Q Outer Circle -->
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#ffffff" stroke-width="8" opacity="0.9"/>
+    <!-- Q Inner Tail -->
+    <path d="M 20 20 L 30 30" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+  </g>
+  
+  <!-- Typing Indicator Dots -->
+  <circle cx="60" cy="60" r="3" fill="#fbbf24" opacity="0.8">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="75" cy="55" r="3" fill="#fbbf24" opacity="0.6">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" begin="0.3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="90" cy="50" r="3" fill="#fbbf24" opacity="0.4">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" begin="0.6s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Learning Progress Arc -->
+  <path d="M 130 40 A 25 25 0 0 1 160 70" 
+        fill="none" 
+        stroke="#10b981" 
+        stroke-width="4" 
+        stroke-linecap="round" 
+        opacity="0.8"/>
+  <path d="M 160 70 A 25 25 0 0 1 130 100" 
+        fill="none" 
+        stroke="#10b981" 
+        stroke-width="4" 
+        stroke-linecap="round" 
+        opacity="0.6"/>
+</svg>

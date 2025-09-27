@@ -2,37 +2,95 @@
   "build": {
     "beforeBuildCommand": "yarn build",
     "beforeDevCommand": "yarn run dev",
-    "devPath": "http://localhost:3000",
+    "devPath": "http://localhost:5173",
     "distDir": "../build"
   },
   "package": {
-    "productName": "qwerty-learner",
+    "productName": "Qwerty Learner",
     "version": "0.1.0"
   },
   "tauri": {
     "allowlist": {
-      "all": false
+      "all": false,
+      "fs": {
+        "all": false,
+        "readFile": true,
+        "writeFile": true,
+        "readDir": true,
+        "copyFile": true,
+        "createDir": true,
+        "removeDir": true,
+        "removeFile": true,
+        "renameFile": true,
+        "exists": true,
+        "scope": ["$APPDATA", "$APPDATA/**", "$DOCUMENT", "$DOCUMENT/**", "$DOWNLOAD", "$DOWNLOAD/**"]
+      },
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "window": {
+        "all": false,
+        "close": true,
+        "hide": true,
+        "show": true,
+        "maximize": true,
+        "minimize": true,
+        "unmaximize": true,
+        "unminimize": true,
+        "startDragging": true,
+        "setResizable": true,
+        "setTitle": true,
+        "setSize": true,
+        "setMinSize": true,
+        "setMaxSize": true,
+        "setPosition": true,
+        "setFullscreen": true,
+        "setFocus": true,
+        "setIcon": true,
+        "setSkipTaskbar": true,
+        "setAlwaysOnTop": true,
+        "center": true
+      },
+      "globalShortcut": {
+        "all": true
+      },
+      "notification": {
+        "all": false
+      },
+      "app": {
+        "all": false,
+        "show": true,
+        "hide": true
+      },
+      "path": {
+        "all": true
+      },
+      "os": {
+        "all": true
+      }
     },
     "bundle": {
       "active": true,
-      "category": "DeveloperTool",
-      "copyright": "",
+      "category": "Education",
+      "copyright": "Copyright © 2024 Qwerty Learner. All rights reserved.",
       "deb": {
         "depends": []
       },
       "externalBin": [],
       "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.icns", "icons/icon.ico"],
-      "identifier": "com.litongjava.qwerty.learner",
-      "longDescription": "",
+      "identifier": "com.qwertylearner.app",
+      "longDescription": "为键盘工作者设计的单词记忆与英语肌肉记忆锻炼软件。结合打字练习与单词记忆，支持音标发音、默写模式、多样词库，高效提升英语水平和打字技能。",
       "macOS": {
         "entitlements": null,
         "exceptionDomain": "",
         "frameworks": [],
         "providerShortName": null,
-        "signingIdentity": null
+        "signingIdentity": null,
+        "minimumSystemVersion": "10.13"
       },
       "resources": [],
-      "shortDescription": "",
+      "shortDescription": "为键盘工作者设计的英语学习软件",
       "targets": "all",
       "windows": {
         "certificateThumbprint": null,
@@ -49,11 +107,24 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
+        "height": 800,
         "resizable": true,
-        "title": "qwerty-learner",
-        "width": 800
+        "title": "Qwerty Learner",
+        "width": 1200,
+        "minHeight": 600,
+        "minWidth": 800,
+        "center": true,
+        "decorations": true,
+        "transparent": false,
+        "alwaysOnTop": false,
+        "skipTaskbar": false,
+        "visible": true
       }
-    ]
+    ],
+    "systemTray": {
+      "iconPath": "icons/icon.png",
+      "iconAsTemplate": true,
+      "menuOnLeftClick": false
+    }
   }
 }

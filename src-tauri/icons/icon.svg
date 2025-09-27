@@ -1,0 +1,99 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 主背景渐变 -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 键盘渐变 -->
+    <linearGradient id="keyboardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 按键渐变 -->
+    <linearGradient id="keyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f1f5f9;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Q字母渐变 -->
+    <linearGradient id="letterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 阴影滤镜 -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+    
+    <!-- 内阴影滤镜 -->
+    <filter id="innerShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feOffset dx="0" dy="2"/>
+      <feGaussianBlur stdDeviation="3" result="offset-blur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.1"/>
+      <feComposite in2="offset-blur" operator="in"/>
+    </filter>
+  </defs>
+  
+  <!-- 主圆形背景 -->
+  <circle cx="256" cy="256" r="240" fill="url(#mainGradient)" filter="url(#shadow)"/>
+  
+  <!-- 内圆装饰 -->
+  <circle cx="256" cy="256" r="220" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  
+  <!-- 键盘底座 -->
+  <rect x="120" y="280" width="272" height="120" rx="16" ry="16" fill="url(#keyboardGradient)" filter="url(#innerShadow)"/>
+  
+  <!-- 键盘按键行1 -->
+  <rect x="140" y="300" width="28" height="20" rx="4" ry="4" fill="url(#keyGradient)"/>
+  <rect x="176" y="300" width="28" height="20" rx="4" ry="4" fill="url(#keyGradient)"/>
+  <rect x="212" y="300" width="28" height="20" rx="4" ry="4" fill="url(#keyGradient)"/>
+  <rect x="248" y="300" width="28" height="20" rx="4" ry="4" fill="url(#keyGradient)"/>
+  <rect x="284" y="300" width="28" height="20" rx="4" ry="4" fill="url(#keyGradient)"/>
+  <rect x="320" y="300" width="28" height="20" rx="4" ry="4" fill="url(#keyGradient)"/>
+  <rect x="356" y="300" width="28" height="20" rx="4" ry="4" fill="url(#keyGradient)"/>
+  
+  <!-- 键盘按键行2 -->
+  <rect x="152" y="328" width="28" height="20" rx="4" ry="4" fill="url(#keyGradient)"/>
+  <rect x="188" y="328" width="28" height="20" rx="4" ry="4" fill="url(#keyGradient)"/>
+  <rect x="224" y="328" width="28" height="20" rx="4" ry="4" fill="url(#keyGradient)"/>
+  <rect x="260" y="328" width="28" height="20" rx="4" ry="4" fill="url(#keyGradient)"/>
+  <rect x="296" y="328" width="28" height="20" rx="4" ry="4" fill="url(#keyGradient)"/>
+  <rect x="332" y="328" width="28" height="20" rx="4" ry="4" fill="url(#keyGradient)"/>
+  
+  <!-- 键盘按键行3 -->
+  <rect x="164" y="356" width="28" height="20" rx="4" ry="4" fill="url(#keyGradient)"/>
+  <rect x="200" y="356" width="28" height="20" rx="4" ry="4" fill="url(#keyGradient)"/>
+  <rect x="236" y="356" width="28" height="20" rx="4" ry="4" fill="url(#keyGradient)"/>
+  <rect x="272" y="356" width="28" height="20" rx="4" ry="4" fill="url(#keyGradient)"/>
+  <rect x="308" y="356" width="28" height="20" rx="4" ry="4" fill="url(#keyGradient)"/>
+  
+  <!-- 空格键 -->
+  <rect x="180" y="384" width="152" height="16" rx="8" ry="8" fill="url(#keyGradient)"/>
+  
+  <!-- 大Q字母 -->
+  <circle cx="256" cy="200" r="60" fill="none" stroke="url(#letterGradient)" stroke-width="12"/>
+  <line x1="296" y1="240" x2="316" y2="260" stroke="url(#letterGradient)" stroke-width="12" stroke-linecap="round"/>
+  
+  <!-- 装饰性光点 -->
+  <circle cx="180" cy="160" r="3" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="332" cy="160" r="2" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="200" cy="240" r="2" fill="rgba(255,255,255,0.5)"/>
+  
+  <!-- 进度弧线 -->
+  <path d="M 156 256 A 100 100 0 0 1 356 256" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- 打字指示点 -->
+  <circle cx="220" cy="140" r="4" fill="#10b981">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="240" cy="140" r="4" fill="#10b981">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="260" cy="140" r="4" fill="#10b981">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

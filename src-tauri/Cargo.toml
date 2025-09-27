@@ -1,23 +1,63 @@
 [package]
-name = "app"
+name = "qwerty-learner"
 version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
-license = ""
-repository = ""
-default-run = "app"
+description = "为键盘工作者设计的单词记忆与英语肌肉记忆锻炼软件"
+authors = ["Qwerty Learner Team"]
+license = "GPL-3.0"
+repository = "https://github.com/Kaiyiwing/qwerty-learner"
+default-run = "qwerty-learner"
 edition = "2021"
 rust-version = "1.60"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [build-dependencies]
-tauri-build = { version = "1.4.0", features = [] }
+tauri-build = { version = "1.5.0", features = [] }
 
 [dependencies]
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
-tauri = { version = "1.4.0", features = [] }
+tauri = { version = "1.5.0", features = [
+  "system-tray", 
+  "global-shortcut-all", 
+  "shell-open", 
+  "path-all", 
+  "os-all",
+  "app-hide",
+  "app-show",
+  "fs-copy-file",
+  "fs-create-dir",
+  "fs-exists",
+  "fs-read-dir",
+  "fs-read-file",
+  "fs-remove-dir",
+  "fs-remove-file",
+  "fs-rename-file",
+  "fs-write-file",
+  "window-center",
+  "window-close",
+  "window-hide",
+  "window-maximize",
+  "window-minimize",
+  "window-set-always-on-top",
+  "window-set-focus",
+  "window-set-fullscreen",
+  "window-set-icon",
+  "window-set-max-size",
+  "window-set-min-size",
+  "window-set-position",
+  "window-set-resizable",
+  "window-set-size",
+  "window-set-skip-taskbar",
+  "window-set-title",
+  "window-show",
+  "window-start-dragging",
+  "window-unmaximize",
+  "window-unminimize"
+] }
+tokio = { version = "1.0", features = ["full"] }
+dirs = "5.0"
+chrono = { version = "0.4.31", features = ["serde"] }
 
 [features]
 # this feature is used for production builds or when `devPath` points to the filesystem and the built-in dev server is disabled.

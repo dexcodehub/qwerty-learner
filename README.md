@@ -329,3 +329,8 @@ JS API 来自于[react-code-game](https://github.com/webzhd/react-code-game) ，
 ## 🌟 Stargazers over time
 
 [![Stargazers over time](https://starchart.cc/Realkai42/qwerty-learner.svg)](https://starchart.cc/Realkai42/qwerty-learner)
+
+```
+./scripts/build-signed.sh "Apple Development: "
+codesign -dv "src-tauri/target/release/bundle/dmg/Qwerty Learner_0.1.0_aarch64.dmg"
+```
